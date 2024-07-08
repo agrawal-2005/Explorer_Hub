@@ -37,7 +37,7 @@ const PlaceDetails = ({ place, selected, refProp }) => {
         </Box>
         {place?.awards?.map((award) => (
           <Box display="flex" justifyContent="space-between" my={1} alignItems="center">
-            <img src={award.photo.images.small.url} />
+            <img src={award.images.small} />
             <Typography variant="subtitle2" color="textSecondary">{award.display_name}</Typography>
           </Box>
         ))}
@@ -57,7 +57,7 @@ const PlaceDetails = ({ place, selected, refProp }) => {
       </CardContent>
       <CardActions>
         <Button size="small" color="primary" onClick={() => window.open(place.web_url, '_blank')}>
-          Explorer_HuB
+          Trip Advisor
         </Button>
         <Button size="small" color="primary" onClick={() => window.open(place.website, '_blank')}>
           Website
